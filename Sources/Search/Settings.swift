@@ -567,6 +567,7 @@ struct SettingsPanel: View {
             .labelsHidden()
             .pickerStyle(.menu)
             .fixedSize()
+        case "contacts.fill": keptControl(id)
         default: EmptyView()
         }
     }
@@ -771,7 +772,6 @@ struct SettingsPanel: View {
         case "commandbar": Switch(on: $prefs.commandBar)
         case "start.fresh": Switch(on: $prefs.startsFresh)
         case "note.sharedpins", "note.pinback": Always()
-        case "contacts.fill": keptControl(id)
         default: EmptyView()
         }
     }
